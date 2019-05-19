@@ -41,7 +41,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="tallersimulacion.HomePanel" name="homePanel1">
+    <Component class="views.HomePanel" name="homePanel1">
     </Component>
   </SubComponents>
 </Form>

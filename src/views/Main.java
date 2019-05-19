@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tallersimulacion;
+package views;
 
 /**
  *
@@ -28,7 +28,7 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        homePanel1 = new tallersimulacion.HomePanel();
+        homePanel1 = new views.HomePanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,6 +88,6 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private tallersimulacion.HomePanel homePanel1;
+    private views.HomePanel homePanel1;
     // End of variables declaration//GEN-END:variables
 }
