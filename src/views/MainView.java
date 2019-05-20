@@ -5,6 +5,9 @@
  */
 package views;
 
+import javax.swing.GroupLayout;
+import javax.swing.WindowConstants;
+
 /**
  *
  * @author skypper
@@ -16,7 +19,8 @@ public class MainView extends javax.swing.JFrame {
      */
     public MainView() {
         initComponents();
-        setLocationRelativeTo(null);
+        initMyOwnComponent();
+
     }
 
     /**
@@ -52,8 +56,39 @@ public class MainView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    private void initMyOwnComponent() {
+        getContentPane().removeAll();
+        //my component
+        LoginView loginView = new LoginView();
+        //set close Operation
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //Creating Group Layout
+        GroupLayout layout = new GroupLayout(getContentPane());
+        //Set up Layout
+
+        getContentPane().setLayout(layout);
+        //Set up Horizontal Layout
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(loginView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        //Set up Vertical Layout
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(loginView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        pack();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private views.HomePanel homePanel1;
     // End of variables declaration//GEN-END:variables
+    //private LoginView loginView;
 }
