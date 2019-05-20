@@ -19,7 +19,7 @@ public class MainView extends javax.swing.JFrame {
      */
     public MainView() {
         initComponents();
-        initMyOwnComponent();
+        //initMyOwnComponent();
 
     }
 
@@ -33,8 +33,46 @@ public class MainView extends javax.swing.JFrame {
     private void initComponents() {
 
         homePanel1 = new views.HomePanel();
+        menuBar = new javax.swing.JMenuBar();
+        sesionMenu = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        lineasMenu = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        rutasMenu = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        sesionMenu.setText("Sesión");
+
+        jMenuItem1.setText("Iniciar Sesión");
+        sesionMenu.add(jMenuItem1);
+
+        jMenuItem2.setText("Cerrar Sesión");
+        sesionMenu.add(jMenuItem2);
+
+        menuBar.add(sesionMenu);
+
+        lineasMenu.setText("Lineas");
+
+        jMenuItem4.setText("Crear Lineas");
+        lineasMenu.add(jMenuItem4);
+
+        jMenuItem5.setText("Ver Lineas");
+        lineasMenu.add(jMenuItem5);
+
+        menuBar.add(lineasMenu);
+
+        rutasMenu.setText("Rutas");
+
+        jMenuItem6.setText("Ver Paradas");
+        rutasMenu.add(jMenuItem6);
+
+        menuBar.add(rutasMenu);
+
+        setJMenuBar(menuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,6 +127,15 @@ public class MainView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private views.HomePanel homePanel1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenu lineasMenu;
+    private javax.swing.JMenuBar menuBar;
+    private javax.swing.JMenu rutasMenu;
+    private javax.swing.JMenu sesionMenu;
     // End of variables declaration//GEN-END:variables
     //private LoginView loginView;
 }
