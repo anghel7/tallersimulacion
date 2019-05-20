@@ -5,6 +5,8 @@
  */
 package controllers;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import views.LoginView;
 import views.MainView;
 
@@ -15,11 +17,20 @@ import views.MainView;
 public class MainController {
 
     MainView mainView;
-    
-    
 
     public MainController(MainView mainView) {
-        //mainView.add(new LoginView());
+        this.mainView = mainView;
+        initController();
+    }
+
+    public void initController() {
+        mainView.loginMenuItem.addActionListener((ActionEvent evt) -> {
+            showLoginView(evt);
+        });
+    }
+
+    public void showLoginView(ActionEvent evt) {
+        System.out.println("controllers.MainController.showLoginView()");
     }
 
     /**
@@ -53,8 +64,8 @@ public class MainController {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                MainView mainview =  new MainView();
-                MainController mainController= new MainController(mainview);
+                MainView mainview = new MainView();
+                MainController mainController = new MainController(mainview);
                 mainview.setVisible(true);
             }
         });
