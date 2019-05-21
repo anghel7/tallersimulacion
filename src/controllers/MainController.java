@@ -12,6 +12,7 @@ import javax.swing.WindowConstants;
 import views.CreateLineaView;
 import views.HomeView;
 import views.ListLineaView;
+import views.ListParadaView;
 import views.LoginView;
 import views.MainView;
 
@@ -23,12 +24,18 @@ public class MainController {
     
     MainView mainView;
     HomeView homeView;
+    
     LoginView loginView;
     LoginController loginController;
+    
     CreateLineaView createLineaView;
     CreateLineaController createLineaController;
+    
     ListLineaView listLineaView;
     ListLineaController listLineaController;
+    
+    ListParadaView listParadaView;
+    ListParadaController listParadaController;
     
     public MainController(MainView mainView) {
         this.mainView = mainView;
@@ -41,6 +48,9 @@ public class MainController {
         
         listLineaView = new ListLineaView();
         listLineaController = new ListLineaController(listLineaView);
+        
+        listParadaView = new ListParadaView();
+        listParadaController = new ListParadaController(listParadaView);
         
         initController();
     }
@@ -113,7 +123,7 @@ public class MainController {
     }
     
     public void showListParadaView(ActionEvent evt) {
-        System.out.println("controllers.MainController.showListParadaView()");
+        loadView(listParadaView);
     }
 
     /**
