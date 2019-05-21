@@ -5,7 +5,7 @@
  */
 package controllers;
 
-import views.ListLineaView;
+import views.CreateLineaView;
 
 /**
  *
@@ -13,10 +13,10 @@ import views.ListLineaView;
  */
 public class CreateLineaController {
 
-    ListLineaView listLineaView;
+    CreateLineaView createLineaView;
 
-    public CreateLineaController(ListLineaView view) {
-        this.listLineaView = view;
+    public CreateLineaController(CreateLineaView createLineaView) {
+        this.createLineaView = createLineaView;
         loadConf();
     }
 
