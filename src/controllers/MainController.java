@@ -27,10 +27,39 @@ public class MainController {
         mainView.loginMenuItem.addActionListener((ActionEvent evt) -> {
             showLoginView(evt);
         });
+        mainView.logoutMenuItem.addActionListener((ActionEvent evt) -> {
+            showHomeView(evt);
+        });
+        mainView.createLineaMenuItem.addActionListener((ActionEvent evt) -> {
+            showCreateLineaView(evt);
+        });
+        mainView.listLineaMenuItem.addActionListener((ActionEvent evt) -> {
+            showListLineaView(evt);
+        });
+        mainView.listParadaMenuItem.addActionListener((ActionEvent evt) -> {
+            showListParadaView(evt);
+        });
+        
     }
 
     public void showLoginView(ActionEvent evt) {
         System.out.println("controllers.MainController.showLoginView()");
+    }
+
+    public void showHomeView(ActionEvent evt) {
+        System.out.println("controllers.MainController.showHomeView()");
+    }
+
+    public void showCreateLineaView(ActionEvent evt) {
+        System.out.println("controllers.MainController.showCreateLineaView()");
+    }
+
+    public void showListLineaView(ActionEvent evt) {
+        System.out.println("controllers.MainController.showListLineaView()");
+    }
+
+    public void showListParadaView(ActionEvent evt) {
+        System.out.println("controllers.MainController.showListParadaView()");
     }
 
     /**
