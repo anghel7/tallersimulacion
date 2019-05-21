@@ -11,6 +11,7 @@ import javax.swing.JComponent;
 import javax.swing.WindowConstants;
 import views.CreateLineaView;
 import views.HomeView;
+import views.ListLineaView;
 import views.LoginView;
 import views.MainView;
 
@@ -19,14 +20,16 @@ import views.MainView;
  * @author skypper
  */
 public class MainController {
-
+    
     MainView mainView;
     HomeView homeView;
     LoginView loginView;
     LoginController loginController;
     CreateLineaView createLineaView;
     CreateLineaController createLineaController;
-
+    ListLineaView listLineaView;
+    ListLineaController listLineaController;
+    
     public MainController(MainView mainView) {
         this.mainView = mainView;
         homeView = new HomeView();
@@ -36,13 +39,16 @@ public class MainController {
         createLineaView = new CreateLineaView();
         createLineaController = new CreateLineaController(createLineaView);
         
+        listLineaView = new ListLineaView();
+        listLineaController = new ListLineaController(listLineaView);
+        
         initController();
     }
-
+    
     private void removeAllElements() {
         this.mainView.getContentPane().removeAll();
     }
-
+    
     public void initController() {
         mainView.loginMenuItem.addActionListener((ActionEvent evt) -> {
             showLoginView(evt);
@@ -59,9 +65,9 @@ public class MainController {
         mainView.listParadaMenuItem.addActionListener((ActionEvent evt) -> {
             showListParadaView(evt);
         });
-
+        
     }
-
+    
     private void loadView(JComponent viewComponent) {
         removeAllElements();
         //set close Operation
@@ -86,26 +92,26 @@ public class MainController {
                                 .addComponent(viewComponent, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
+        
         mainView.pack();
     }
-
+    
     public void showLoginView(ActionEvent evt) {
         loadView(loginView);
     }
-
+    
     public void showHomeView(ActionEvent evt) {
         loadView(homeView);
     }
-
+    
     public void showCreateLineaView(ActionEvent evt) {
         loadView(createLineaView);
     }
-
+    
     public void showListLineaView(ActionEvent evt) {
-        System.out.println("controllers.MainController.showListLineaView()");
+        loadView(listLineaView);
     }
-
+    
     public void showListParadaView(ActionEvent evt) {
         System.out.println("controllers.MainController.showListParadaView()");
     }
@@ -147,5 +153,5 @@ public class MainController {
             }
         });
     }
-
+    
 }
