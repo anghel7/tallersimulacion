@@ -12,12 +12,12 @@ import java.awt.Image;
  *
  * @author skypper
  */
-public class HomePanel extends javax.swing.JPanel {
+public class HomeView extends javax.swing.JPanel {
 
     /**
      * Creates new form Home
      */
-    public HomePanel() {
+    public HomeView() {
         initComponents();
     }
 

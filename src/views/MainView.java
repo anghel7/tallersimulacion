@@ -19,8 +19,6 @@ public class MainView extends javax.swing.JFrame {
      */
     public MainView() {
         initComponents();
-        //initMyOwnComponent();
-
     }
 
     /**
@@ -32,7 +30,7 @@ public class MainView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        homePanel1 = new views.HomePanel();
+        homePanel1 = new views.HomeView();
         menuBar = new javax.swing.JMenuBar();
         sesionMenu = new javax.swing.JMenu();
         loginMenuItem = new javax.swing.JMenuItem();
@@ -94,40 +92,9 @@ public class MainView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void initMyOwnComponent() {
-        getContentPane().removeAll();
-        //my component
-        LoginView loginView = new LoginView();
-        //set close Operation
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        //Creating Group Layout
-        GroupLayout layout = new GroupLayout(getContentPane());
-        //Set up Layout
-
-        getContentPane().setLayout(layout);
-        //Set up Horizontal Layout
-        layout.setHorizontalGroup(
-                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(loginView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        //Set up Vertical Layout
-        layout.setVerticalGroup(
-                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(loginView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        pack();
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem createLineaMenuItem;
-    private views.HomePanel homePanel1;
+    private views.HomeView homePanel1;
     private javax.swing.JMenu lineasMenu;
     public javax.swing.JMenuItem listLineaMenuItem;
     public javax.swing.JMenuItem listParadaMenuItem;

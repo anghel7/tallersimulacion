@@ -112,7 +112,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="views.HomePanel" name="homePanel1">
+    <Component class="views.HomeView" name="homePanel1">
     </Component>
   </SubComponents>
 </Form>

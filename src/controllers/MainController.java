@@ -6,7 +6,9 @@
 package controllers;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.GroupLayout;
+import javax.swing.WindowConstants;
+import views.HomeView;
 import views.LoginView;
 import views.MainView;
 
@@ -17,10 +19,20 @@ import views.MainView;
 public class MainController {
 
     MainView mainView;
+    HomeView homeView;
+    LoginView loginView;
+    LoginController loginController;
 
     public MainController(MainView mainView) {
         this.mainView = mainView;
+        homeView = new HomeView();
+        loginView = new LoginView();
+        loginController = new LoginController(loginView);
         initController();
+    }
+
+    private void removeAllElements() {
+        this.mainView.getContentPane().removeAll();
     }
 
     public void initController() {
@@ -39,15 +51,63 @@ public class MainController {
         mainView.listParadaMenuItem.addActionListener((ActionEvent evt) -> {
             showListParadaView(evt);
         });
-        
+
     }
 
     public void showLoginView(ActionEvent evt) {
-        System.out.println("controllers.MainController.showLoginView()");
+        removeAllElements();
+        //set close Operation
+        mainView.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //Creating Group Layout
+        GroupLayout layout = new GroupLayout(mainView.getContentPane());
+        //Set up Layout
+        mainView.getContentPane().setLayout(layout);
+        //Set up Horizontal Layout
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(loginView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        //Set up Vertical Layout
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(loginView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mainView.pack();
     }
 
     public void showHomeView(ActionEvent evt) {
-        System.out.println("controllers.MainController.showHomeView()");
+        removeAllElements();
+        //set close Operation
+        mainView.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //Creating Group Layout
+        GroupLayout layout = new GroupLayout(mainView.getContentPane());
+        //Set up Layout
+        mainView.getContentPane().setLayout(layout);
+        //Set up Horizontal Layout
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(homeView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        //Set up Vertical Layout
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(homeView, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        mainView.pack();
     }
 
     public void showCreateLineaView(ActionEvent evt) {
