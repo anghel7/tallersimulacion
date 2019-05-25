@@ -41,7 +41,7 @@ public class MainController implements Router{
         this.mainView = mainView;
         homeView = new HomeView();
         loginView = new LoginView();
-        loginController = new LoginController(loginView);
+        loginController = new LoginController(loginView,this);
         
         createLineaView = new CreateLineaView();
         createLineaController = new CreateLineaController(createLineaView);

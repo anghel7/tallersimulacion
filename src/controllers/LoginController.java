@@ -12,12 +12,13 @@ import views.LoginView;
  *
  * @author skypper
  */
-public class LoginController {
+public class LoginController extends Controller{
 
     LoginView loginView;
 
-    public LoginController(LoginView loginView) {
+    public LoginController(LoginView loginView, Router router) {
         this.loginView = loginView;
+        this.router = router;
         loadConf();
     }
 
@@ -29,7 +30,7 @@ public class LoginController {
         } else if (!"admin".equals(password)) {
             loginView.labelError.setText("Contraseña Invlida");
         } else {
-            System.out.println("controllers.LoginController.login()");
+            router.showHomeView(evt);
         }
     }
 
