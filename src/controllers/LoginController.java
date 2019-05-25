@@ -12,7 +12,7 @@ import views.LoginView;
  *
  * @author skypper
  */
-public class LoginController extends Controller{
+public class LoginController extends Controller {
 
     LoginView loginView;
 

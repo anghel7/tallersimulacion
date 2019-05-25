@@ -6,7 +6,6 @@
 package controllers;
 
 import views.ListLineaView;
-import views.LoginView;
 
 /**
  *
