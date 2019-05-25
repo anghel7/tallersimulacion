@@ -20,7 +20,7 @@ import views.MainView;
  *
  * @author skypper
  */
-public class MainController {
+public class MainController implements Router{
     
     MainView mainView;
     HomeView homeView;

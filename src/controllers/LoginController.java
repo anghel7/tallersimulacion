@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import java.awt.event.ActionEvent;
 import views.LoginView;
 
 /**
@@ -20,10 +21,22 @@ public class LoginController {
         loadConf();
     }
 
-    public void login() {
+    public void login(ActionEvent evt) {
+        String username = loginView.userTextField.getText();
+        String password = new String(loginView.passwordField.getPassword());
+        if (!"admin".equals(username)) {
+            loginView.labelError.setText("Usuario Invalido");
+        } else if (!"admin".equals(password)) {
+            loginView.labelError.setText("Contraseña Invlida");
+        } else {
+            System.out.println("controllers.LoginController.login()");
+        }
     }
 
     public void loadConf() {
         loginView.labelError.setText("");
+        loginView.aceptarButton.addActionListener((ActionEvent evt) -> {
+            login(evt);
+        });
     }
 }
