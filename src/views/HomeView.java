@@ -22,7 +22,7 @@ public class HomeView extends javax.swing.JPanel {
     }
 
     public void paint(Graphics g) {
-        Image imagen = new ImageIcon(getClass().getResource("/img/maxresdefault.jpg")).getImage();
+        Image imagen = new ImageIcon(getClass().getResource("/img/tren.png")).getImage();
         g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
         setOpaque(false);
         super.paint(g);

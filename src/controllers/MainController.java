@@ -159,6 +159,7 @@ public class MainController {
             public void run() {
                 MainView mainview = new MainView();
                 MainController mainController = new MainController(mainview);
+                mainview.setLocationRelativeTo(null);
                 mainview.setVisible(true);
             }
         });
