@@ -16,14 +16,15 @@ import views.ListLineaView;
  *
  * @author skypper
  */
-public class ListLineaController {
+public class ListLineaController extends Controller {
 
     ListLineaView listLineaView;
     ModelManager modelManager;
 
-    public ListLineaController(ListLineaView view, ModelManager modelManager) {
+    public ListLineaController(ListLineaView view, ModelManager modelManager, Router router) {
         this.listLineaView = view;
         this.modelManager = modelManager;
+        this.router = router;
         loadConf();
     }
 
@@ -41,9 +42,9 @@ public class ListLineaController {
         ArrayList<LineaItemView> itemViewList = new ArrayList<>();
         for (Linea linea : modelManager.getLineas()) {
             LineaItemView lineaItemView = new LineaItemView();
-            LineaItemController lineaItemController = new LineaItemController(lineaItemView, linea);            
+            LineaItemController lineaItemController = new LineaItemController(lineaItemView, linea, router);
             itemViewList.add(lineaItemView);
-            
+
         }
 
 

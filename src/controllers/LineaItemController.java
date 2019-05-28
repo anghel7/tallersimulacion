@@ -7,7 +7,6 @@ package controllers;
 
 import java.awt.event.ActionEvent;
 import views.LineaItemView;
-import views.ListLineaView;
 
 /**
  *
@@ -20,7 +19,7 @@ public class LineaItemController {
     LineaItemView lineaItemView;
     Linea linea;
 
-    public LineaItemController(LineaItemView view, Linea linea) {
+    public LineaItemController(LineaItemView view, Linea linea, Router router) {
         this.lineaItemView = view;
         this.linea = linea;
         loadConf();
