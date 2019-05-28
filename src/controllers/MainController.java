@@ -47,7 +47,7 @@ public class MainController implements Router {
         loginController = new LoginController(loginView, this);
 
         createLineaView = new CreateLineaView();
-        createLineaController = new CreateLineaController(createLineaView);
+        createLineaController = new CreateLineaController(createLineaView, this, modelManager);
 
         listLineaView = new ListLineaView();
         listLineaController = new ListLineaController(listLineaView, modelManager);
@@ -128,6 +128,7 @@ public class MainController implements Router {
 
     @Override
     public void showListLineaView(ActionEvent evt) {
+        listLineaController.loadConf();
         loadView(listLineaView);
     }
 
