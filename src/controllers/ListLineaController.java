@@ -6,11 +6,7 @@
 package controllers;
 
 import java.util.ArrayList;
-import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import models.Linea;
 import models.ModelManager;
 import views.LineaItemView;
