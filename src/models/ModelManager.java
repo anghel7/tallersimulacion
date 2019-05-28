@@ -23,6 +23,14 @@ public class ModelManager {
         lineas.add(linea);
     }
 
+    public ArrayList<Linea> getLineas() {
+        return lineas;
+    }
+
+    public void setLineas(ArrayList<Linea> lineas) {
+        this.lineas = lineas;
+    }
+
     public static ModelManager getPopulateMainModel() {
         ModelManager tren = new ModelManager();
         Linea lineaRoja = new Linea(

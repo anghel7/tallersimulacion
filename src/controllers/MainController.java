@@ -50,7 +50,7 @@ public class MainController implements Router {
         createLineaController = new CreateLineaController(createLineaView);
 
         listLineaView = new ListLineaView();
-        listLineaController = new ListLineaController(listLineaView);
+        listLineaController = new ListLineaController(listLineaView, modelManager);
 
         listParadaView = new ListParadaView();
         listParadaController = new ListParadaController(listParadaView);

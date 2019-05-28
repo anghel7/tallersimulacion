@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import models.ModelManager;
 import views.ListLineaView;
 
 /**
@@ -14,9 +15,11 @@ import views.ListLineaView;
 public class ListLineaController {
 
     ListLineaView listLineaView;
+    ModelManager modelManager;
 
-    public ListLineaController(ListLineaView view) {
+    public ListLineaController(ListLineaView view, ModelManager modelManager) {
         this.listLineaView = view;
+        this.modelManager = modelManager;
         loadConf();
     }
 
