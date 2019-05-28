@@ -38,7 +38,7 @@ public class ListLineaController {
         javax.swing.GroupLayout panelContainerLayout = new javax.swing.GroupLayout(listLineaView.panelContainer);
         listLineaView.panelContainer.setLayout(panelContainerLayout);
 
-        ArrayList<LineaItemView> itemViewList = new ArrayList<LineaItemView>();
+        ArrayList<LineaItemView> itemViewList = new ArrayList<>();
         for (Linea linea : modelManager.getLineas()) {
             LineaItemView lineaItemView = new LineaItemView();
             lineaItemView.descripcionTextArea.setText(linea.getDescripcion());
