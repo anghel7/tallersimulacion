@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.GroupLayout;
 import javax.swing.JComponent;
 import javax.swing.WindowConstants;
+import models.ModelManager;
 import views.CreateLineaView;
 import views.HomeView;
 import views.ListLineaView;
@@ -21,46 +22,48 @@ import views.MainView;
  * @author skypper
  */
 public class MainController implements Router {
-    
+
     MainView mainView;
     HomeView homeView;
-    
+
     LoginView loginView;
     LoginController loginController;
-    
+
     CreateLineaView createLineaView;
     CreateLineaController createLineaController;
-    
+
     ListLineaView listLineaView;
     ListLineaController listLineaController;
-    
+
     ListParadaView listParadaView;
     ListParadaController listParadaController;
-    
+    ModelManager modelManager;
+
     public MainController(MainView mainView) {
         this.mainView = mainView;
+        modelManager = ModelManager.getPopulateMainModel();
         homeView = new HomeView();
         loginView = new LoginView();
         loginController = new LoginController(loginView, this);
-        
+
         createLineaView = new CreateLineaView();
         createLineaController = new CreateLineaController(createLineaView);
-        
+
         listLineaView = new ListLineaView();
         listLineaController = new ListLineaController(listLineaView);
-        
+
         listParadaView = new ListParadaView();
         listParadaController = new ListParadaController(listParadaView);
-        
+
         initController();
     }
-    
+
     private void removeAllElements() {
         this.mainView.getContentPane().removeAll();
     }
-    
+
     public void initController() {
-        enableMenubar(false);
+        enableMenubar(true);
         mainView.loginMenuItem.addActionListener((ActionEvent evt) -> {
             showLoginView(evt);
         });
@@ -77,9 +80,9 @@ public class MainController implements Router {
         mainView.listParadaMenuItem.addActionListener((ActionEvent evt) -> {
             showListParadaView(evt);
         });
-        
+
     }
-    
+
     private void loadView(JComponent viewComponent) {
         removeAllElements();
         //set close Operation
@@ -104,35 +107,35 @@ public class MainController implements Router {
                                 .addComponent(viewComponent, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
+
         mainView.pack();
     }
-    
+
     @Override
     public void showLoginView(ActionEvent evt) {
         loadView(loginView);
     }
-    
+
     @Override
     public void showHomeView(ActionEvent evt) {
         loadView(homeView);
     }
-    
+
     @Override
     public void showCreateLineaView(ActionEvent evt) {
         loadView(createLineaView);
     }
-    
+
     @Override
     public void showListLineaView(ActionEvent evt) {
         loadView(listLineaView);
     }
-    
+
     @Override
     public void showListParadaView(ActionEvent evt) {
         loadView(listParadaView);
     }
-    
+
     @Override
     public void enableMenubar(boolean isEnabled) {
         mainView.lineasMenu.setEnabled(isEnabled);
@@ -175,5 +178,5 @@ public class MainController implements Router {
             mainview.setVisible(true);
         });
     }
-    
+
 }
