@@ -63,7 +63,7 @@ public class MainController implements Router {
     }
 
     public void initController() {
-        enableMenubar(true);
+        enableMenubar(false);
         mainView.loginMenuItem.addActionListener((ActionEvent evt) -> {
             showLoginView(evt);
         });
