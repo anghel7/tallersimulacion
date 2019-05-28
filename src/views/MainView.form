@@ -34,6 +34,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Lineas"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="createLineaMenuItem">
               <Properties>
@@ -57,6 +60,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Rutas"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="listParadaMenuItem">
               <Properties>

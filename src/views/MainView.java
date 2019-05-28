@@ -92,13 +92,13 @@ public class MainView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem createLineaMenuItem;
     private views.HomeView homeView;
-    private javax.swing.JMenu lineasMenu;
+    public javax.swing.JMenu lineasMenu;
     public javax.swing.JMenuItem listLineaMenuItem;
     public javax.swing.JMenuItem listParadaMenuItem;
     public javax.swing.JMenuItem loginMenuItem;
     public javax.swing.JMenuItem logoutMenuItem;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenu rutasMenu;
+    public javax.swing.JMenu rutasMenu;
     public javax.swing.JMenu sesionMenu;
     // End of variables declaration//GEN-END:variables
 }

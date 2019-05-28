@@ -20,7 +20,7 @@ import views.MainView;
  *
  * @author skypper
  */
-public class MainController implements Router{
+public class MainController implements Router {
     
     MainView mainView;
     HomeView homeView;
@@ -41,7 +41,7 @@ public class MainController implements Router{
         this.mainView = mainView;
         homeView = new HomeView();
         loginView = new LoginView();
-        loginController = new LoginController(loginView,this);
+        loginController = new LoginController(loginView, this);
         
         createLineaView = new CreateLineaView();
         createLineaController = new CreateLineaController(createLineaView);
@@ -60,6 +60,9 @@ public class MainController implements Router{
     }
     
     public void initController() {
+        mainView.lineasMenu.setEnabled(false);
+        mainView.rutasMenu.setEnabled(false);
+        
         mainView.loginMenuItem.addActionListener((ActionEvent evt) -> {
             showLoginView(evt);
         });
