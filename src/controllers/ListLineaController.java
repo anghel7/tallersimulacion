@@ -41,9 +41,7 @@ public class ListLineaController {
         ArrayList<LineaItemView> itemViewList = new ArrayList<>();
         for (Linea linea : modelManager.getLineas()) {
             LineaItemView lineaItemView = new LineaItemView();
-            lineaItemView.descripcionTextArea.setText(linea.getDescripcion());
-            lineaItemView.descripcionTextArea.setLineWrap(true);
-            lineaItemView.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(linea.getNombre())));
+            LineaItemController lineaItemController = new LineaItemController(lineaItemView, linea);            
             itemViewList.add(lineaItemView);
             
         }

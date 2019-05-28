@@ -29,7 +29,7 @@ public class LineaItemView extends javax.swing.JPanel {
 
         jScrollPane3 = new javax.swing.JScrollPane();
         descripcionTextArea = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        editarButton = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Linea Y")));
 
@@ -38,7 +38,7 @@ public class LineaItemView extends javax.swing.JPanel {
         descripcionTextArea.setText("El 9 de marzo de 2019 se inauguró \nla última línea correspondiente a la\n segunda fase de implementación: \nla línea plateada, que cierra el \ncircuito, y se convierte en la décima \nlínea en funcionamiento.");
         jScrollPane3.setViewportView(descripcionTextArea);
 
-        jButton2.setText("Editar");
+        editarButton.setText("Editar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -50,7 +50,7 @@ public class LineaItemView extends javax.swing.JPanel {
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
+                        .addComponent(editarButton)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -59,7 +59,7 @@ public class LineaItemView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(editarButton)
                 .addGap(6, 6, 6))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -67,7 +67,7 @@ public class LineaItemView extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTextArea descripcionTextArea;
-    private javax.swing.JButton jButton2;
+    public javax.swing.JButton editarButton;
     private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 }
