@@ -31,6 +31,7 @@ public class LoginController extends Controller {
             loginView.labelError.setText("Contraseña Invlida");
         } else {
             router.showHomeView(evt);
+            router.enableMenubar(true);
         }
     }
 

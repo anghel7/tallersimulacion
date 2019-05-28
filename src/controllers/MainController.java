@@ -60,14 +60,13 @@ public class MainController implements Router {
     }
     
     public void initController() {
-        mainView.lineasMenu.setEnabled(false);
-        mainView.rutasMenu.setEnabled(false);
-        
+        enableMenubar(false);
         mainView.loginMenuItem.addActionListener((ActionEvent evt) -> {
             showLoginView(evt);
         });
         mainView.logoutMenuItem.addActionListener((ActionEvent evt) -> {
             showHomeView(evt);
+            enableMenubar(false);
         });
         mainView.createLineaMenuItem.addActionListener((ActionEvent evt) -> {
             showCreateLineaView(evt);
@@ -109,24 +108,35 @@ public class MainController implements Router {
         mainView.pack();
     }
     
+    @Override
     public void showLoginView(ActionEvent evt) {
         loadView(loginView);
     }
     
+    @Override
     public void showHomeView(ActionEvent evt) {
         loadView(homeView);
     }
     
+    @Override
     public void showCreateLineaView(ActionEvent evt) {
         loadView(createLineaView);
     }
     
+    @Override
     public void showListLineaView(ActionEvent evt) {
         loadView(listLineaView);
     }
     
+    @Override
     public void showListParadaView(ActionEvent evt) {
         loadView(listParadaView);
+    }
+    
+    @Override
+    public void enableMenubar(boolean isEnabled) {
+        mainView.lineasMenu.setEnabled(isEnabled);
+        mainView.rutasMenu.setEnabled(isEnabled);
     }
 
     /**
@@ -158,13 +168,11 @@ public class MainController implements Router {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                MainView mainview = new MainView();
-                MainController mainController = new MainController(mainview);
-                mainview.setLocationRelativeTo(null);
-                mainview.setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            MainView mainview = new MainView();
+            MainController mainController = new MainController(mainview);
+            mainview.setLocationRelativeTo(null);
+            mainview.setVisible(true);
         });
     }
     

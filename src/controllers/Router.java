@@ -22,4 +22,6 @@ public interface Router {
     public void showListLineaView(ActionEvent evt);
 
     public void showListParadaView(ActionEvent evt);
+
+    public void enableMenubar(boolean isEnabled);
 }
