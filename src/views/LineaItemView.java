@@ -28,15 +28,15 @@ public class LineaItemView extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        descripcionTextArea = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Linea Y")));
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("El 9 de marzo de 2019 se inauguró \nla última línea correspondiente a la\n segunda fase de implementación: \nla línea plateada, que cierra el \ncircuito, y se convierte en la décima \nlínea en funcionamiento.");
-        jScrollPane3.setViewportView(jTextArea2);
+        descripcionTextArea.setColumns(20);
+        descripcionTextArea.setRows(5);
+        descripcionTextArea.setText("El 9 de marzo de 2019 se inauguró \nla última línea correspondiente a la\n segunda fase de implementación: \nla línea plateada, que cierra el \ncircuito, y se convierte en la décima \nlínea en funcionamiento.");
+        jScrollPane3.setViewportView(descripcionTextArea);
 
         jButton2.setText("Editar");
 
@@ -66,8 +66,8 @@ public class LineaItemView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextArea descripcionTextArea;
     private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }

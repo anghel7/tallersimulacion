@@ -60,12 +60,15 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea2">
+        <Component class="javax.swing.JTextArea" name="descripcionTextArea">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="El 9 de marzo de 2019 se inaugur&#xf3; &#xa;la &#xfa;ltima l&#xed;nea correspondiente a la&#xa; segunda fase de implementaci&#xf3;n: &#xa;la l&#xed;nea plateada, que cierra el &#xa;circuito, y se convierte en la d&#xe9;cima &#xa;l&#xed;nea en funcionamiento."/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
