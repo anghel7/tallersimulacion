@@ -24,7 +24,7 @@ public class EditLineaController {
     }
 
     public void loadConf() {
-        System.out.println("controllers.EditLineaController.loadConf()");
+        editLineaView.nameLabel.setText(linea.getNombre());
     }
 
 }
