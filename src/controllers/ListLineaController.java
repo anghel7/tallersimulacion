@@ -21,7 +21,7 @@ public class ListLineaController extends Controller {
     ListLineaView listLineaView;
     ModelManager modelManager;
 
-    public ListLineaController(ListLineaView view, ModelManager modelManager, Router router) {
+    public ListLineaController(ListLineaView view, Router router, ModelManager modelManager) {
         this.listLineaView = view;
         this.modelManager = modelManager;
         this.router = router;

@@ -12,6 +12,7 @@ import javax.swing.WindowConstants;
 import models.Linea;
 import models.ModelManager;
 import views.CreateLineaView;
+import views.EditLineaView;
 import views.HomeView;
 import views.ListLineaView;
 import views.ListParadaView;
@@ -51,7 +52,7 @@ public class MainController implements Router {
         createLineaController = new CreateLineaController(createLineaView, this, modelManager);
 
         listLineaView = new ListLineaView();
-        listLineaController = new ListLineaController(listLineaView, modelManager, this);
+        listLineaController = new ListLineaController(listLineaView, this, modelManager);
 
         listParadaView = new ListParadaView();
         listParadaController = new ListParadaController(listParadaView);
@@ -146,9 +147,9 @@ public class MainController implements Router {
 
     @Override
     public void showEditLineaView(ActionEvent evt, Linea linea) {
-        
-        
-        //loadView();
+        EditLineaView editLineaView = new EditLineaView();
+        EditLineaController editLineaController = new EditLineaController(editLineaView, linea);
+        loadView(editLineaView);
     }
 
     /**
