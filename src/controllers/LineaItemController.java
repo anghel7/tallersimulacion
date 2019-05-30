@@ -14,7 +14,7 @@ import views.LineaItemView;
  */
 import models.Linea;
 
-public class LineaItemController {
+public class LineaItemController extends Controller {
 
     LineaItemView lineaItemView;
     Linea linea;
@@ -22,6 +22,7 @@ public class LineaItemController {
     public LineaItemController(LineaItemView view, Linea linea, Router router) {
         this.lineaItemView = view;
         this.linea = linea;
+        this.router = router;
         loadConf();
     }
 
@@ -35,6 +36,6 @@ public class LineaItemController {
     }
 
     private void editLinea(ActionEvent evt) {
-        System.out.println("controllers.LineaItemController.editLinea()");
+        router.showEditLineaView(evt, linea);
     }
 }

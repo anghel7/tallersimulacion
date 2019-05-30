@@ -6,6 +6,7 @@
 package controllers;
 
 import java.awt.event.ActionEvent;
+import models.Linea;
 
 /**
  *
@@ -24,4 +25,6 @@ public interface Router {
     public void showListParadaView(ActionEvent evt);
 
     public void enableMenubar(boolean isEnabled);
+
+    public void showEditLineaView(ActionEvent evt, Linea linea);
 }

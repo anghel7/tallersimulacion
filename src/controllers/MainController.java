@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.GroupLayout;
 import javax.swing.JComponent;
 import javax.swing.WindowConstants;
+import models.Linea;
 import models.ModelManager;
 import views.CreateLineaView;
 import views.HomeView;
@@ -50,7 +51,7 @@ public class MainController implements Router {
         createLineaController = new CreateLineaController(createLineaView, this, modelManager);
 
         listLineaView = new ListLineaView();
-        listLineaController = new ListLineaController(listLineaView, modelManager,this);
+        listLineaController = new ListLineaController(listLineaView, modelManager, this);
 
         listParadaView = new ListParadaView();
         listParadaController = new ListParadaController(listParadaView);
@@ -141,6 +142,13 @@ public class MainController implements Router {
     public void enableMenubar(boolean isEnabled) {
         mainView.lineasMenu.setEnabled(isEnabled);
         mainView.rutasMenu.setEnabled(isEnabled);
+    }
+
+    @Override
+    public void showEditLineaView(ActionEvent evt, Linea linea) {
+        
+        
+        //loadView();
     }
 
     /**
