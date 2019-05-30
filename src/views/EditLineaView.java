@@ -150,7 +150,7 @@ public class EditLineaView extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton aceptarButton;
-    private javax.swing.JPanel containerPanel;
+    public javax.swing.JPanel containerPanel;
     public javax.swing.JTextArea descripcionTextArea;
     private javax.swing.JPanel editLineaPanel;
     private javax.swing.JLabel jLabel1;
