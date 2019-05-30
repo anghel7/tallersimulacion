@@ -27,19 +27,8 @@ public class EditLineaController {
         loadConf();
     }
 
-    public void loadConf() {      
-        /*
-        ArrayList<VagonItemView> vagonComponents = new ArrayList<>();        
-        for (Vagon vagon : linea.getVagones()) {
-            VagonItemView vagonItemView = new VagonItemView();
-        }
-        */
-
-        
-
-       
-
-        
+    public void loadConf() {
+        System.out.println("controllers.EditLineaController.loadConf()");
     }
 
 }

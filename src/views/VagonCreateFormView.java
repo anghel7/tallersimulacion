@@ -9,12 +9,12 @@ package views;
  *
  * @author skypper
  */
-public class VagonItemView extends javax.swing.JPanel {
+public class VagonCreateFormView extends javax.swing.JPanel {
 
     /**
-     * Creates new form VagonItemView
+     * Creates new form VagonCreateFormView
      */
-    public VagonItemView() {
+    public VagonCreateFormView() {
         initComponents();
     }
 
@@ -29,8 +29,9 @@ public class VagonItemView extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
-        setBorder(javax.swing.BorderFactory.createTitledBorder("Vagon #"));
+        setBorder(javax.swing.BorderFactory.createTitledBorder("Crear nuevo vagon"));
 
         jLabel1.setText("Cantidad Pasageros");
 
@@ -42,6 +43,8 @@ public class VagonItemView extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setText("Aceptar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -49,18 +52,20 @@ public class VagonItemView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(44, 44, 44)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -70,6 +75,7 @@ public class VagonItemView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

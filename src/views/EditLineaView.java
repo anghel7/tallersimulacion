@@ -28,39 +28,15 @@ public class EditLineaView extends javax.swing.JPanel {
     private void initComponents() {
 
         nameLabel = new javax.swing.JLabel();
-        containerScrollPane = new javax.swing.JScrollPane();
-        containerPanel = new javax.swing.JPanel();
-        vagonItemView1 = new views.VagonItemView();
-        vagonItemView2 = new views.VagonItemView();
-        vagonItemView3 = new views.VagonItemView();
+        editLineaFormView1 = new views.EditLineaFormView();
+        vagonCreateFormView1 = new views.VagonCreateFormView();
+        vagonesListView1 = new views.VagonesListView();
 
         setPreferredSize(new java.awt.Dimension(850, 550));
         setRequestFocusEnabled(false);
 
         nameLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         nameLabel.setText("Nombre de la linea");
-
-        containerScrollPane.setBorder(javax.swing.BorderFactory.createTitledBorder("Vagones"));
-
-        javax.swing.GroupLayout containerPanelLayout = new javax.swing.GroupLayout(containerPanel);
-        containerPanel.setLayout(containerPanelLayout);
-        containerPanelLayout.setHorizontalGroup(
-            containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(vagonItemView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(vagonItemView2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(vagonItemView3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        containerPanelLayout.setVerticalGroup(
-            containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(containerPanelLayout.createSequentialGroup()
-                .addComponent(vagonItemView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(vagonItemView2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(vagonItemView3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        containerScrollPane.setViewportView(containerPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -70,9 +46,13 @@ public class EditLineaView extends javax.swing.JPanel {
                 .addGap(311, 311, 311)
                 .addComponent(nameLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 456, Short.MAX_VALUE)
-                .addComponent(containerScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(editLineaFormView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(vagonCreateFormView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(vagonesListView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
@@ -81,18 +61,20 @@ public class EditLineaView extends javax.swing.JPanel {
                 .addGap(31, 31, 31)
                 .addComponent(nameLabel)
                 .addGap(18, 18, 18)
-                .addComponent(containerScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 258, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(editLineaFormView1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(vagonesListView1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(vagonCreateFormView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 149, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JPanel containerPanel;
-    public javax.swing.JScrollPane containerScrollPane;
+    private views.EditLineaFormView editLineaFormView1;
     public javax.swing.JLabel nameLabel;
-    private views.VagonItemView vagonItemView1;
-    private views.VagonItemView vagonItemView2;
-    private views.VagonItemView vagonItemView3;
+    private views.VagonCreateFormView vagonCreateFormView1;
+    private views.VagonesListView vagonesListView1;
     // End of variables declaration//GEN-END:variables
 }
