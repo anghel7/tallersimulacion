@@ -5,6 +5,8 @@
  */
 package models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author skypper
@@ -13,10 +15,14 @@ public class Linea {
 
     private String nombre;
     private String descripcion;
+    private ArrayList<Vagon> vagones;
+    private int contador;
 
     public Linea(String nombre, String descripcion) {
         this.nombre = nombre;
+        contador = 0;
         this.descripcion = descripcion;
+        this.vagones = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -33,6 +39,16 @@ public class Linea {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public void addVagon(Vagon e) {
+        contador++;
+        e.setNumero(contador);
+        vagones.add(e);
+    }
+
+    public ArrayList<Vagon> getVagones() {
+        return vagones;
     }
 
 }

@@ -45,9 +45,15 @@ public class ModelManager {
                 "Linea Verde",
                 "La longitud de este tramo es la más larga, se calcula una distancia de 27 kilómetros aproximadamente desde la estación Central hasta el término municipal de Suticollo. Atraviesa los municipios de Cochabamba, Colcapirhua, Quillacollo, Vinto y Sipe Sipe . Incluye 23 nuevas estaciones."
         );
-        tren.addLinea(lineaVerde);
-        tren.addLinea(lineaAmarilla);
+        lineaRoja.addVagon(new Vagon(1));
+        lineaRoja.addVagon(new Vagon(90));
+        lineaRoja.addVagon(new Vagon(100));
+        lineaRoja.addVagon(new Vagon(100));
+        lineaRoja.addVagon(new Vagon(100));
         tren.addLinea(lineaRoja);
+        tren.addLinea(lineaAmarilla);
+        tren.addLinea(lineaVerde);
+
         return tren;
     }
 
