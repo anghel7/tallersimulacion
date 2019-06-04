@@ -5,6 +5,8 @@
  */
 package views;
 
+import java.awt.Color;
+
 /**
  *
  * @author skypper
@@ -28,12 +30,72 @@ public class SimulacionView extends javax.swing.JPanel {
     private void initComponents() {
 
         tituloLabel = new javax.swing.JLabel();
+        estacionImage1 = new views.EstacionImage();
+        estacionImage2 = new views.EstacionImage();
+        estacionImage3 = new views.EstacionImage();
+        estacionImage4 = new views.EstacionImage();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(850, 550));
         setRequestFocusEnabled(false);
 
         tituloLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         tituloLabel.setText("Simulación de la linea ..........");
+
+        javax.swing.GroupLayout estacionImage1Layout = new javax.swing.GroupLayout(estacionImage1);
+        estacionImage1.setLayout(estacionImage1Layout);
+        estacionImage1Layout.setHorizontalGroup(
+            estacionImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 101, Short.MAX_VALUE)
+        );
+        estacionImage1Layout.setVerticalGroup(
+            estacionImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout estacionImage2Layout = new javax.swing.GroupLayout(estacionImage2);
+        estacionImage2.setLayout(estacionImage2Layout);
+        estacionImage2Layout.setHorizontalGroup(
+            estacionImage2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 101, Short.MAX_VALUE)
+        );
+        estacionImage2Layout.setVerticalGroup(
+            estacionImage2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout estacionImage3Layout = new javax.swing.GroupLayout(estacionImage3);
+        estacionImage3.setLayout(estacionImage3Layout);
+        estacionImage3Layout.setHorizontalGroup(
+            estacionImage3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 101, Short.MAX_VALUE)
+        );
+        estacionImage3Layout.setVerticalGroup(
+            estacionImage3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout estacionImage4Layout = new javax.swing.GroupLayout(estacionImage4);
+        estacionImage4.setLayout(estacionImage4Layout);
+        estacionImage4Layout.setHorizontalGroup(
+            estacionImage4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 101, Short.MAX_VALUE)
+        );
+        estacionImage4Layout.setVerticalGroup(
+            estacionImage4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+
+        jLabel1.setText("Chinata");
+
+        jLabel2.setText("Sacaba");
+
+        jLabel3.setText("Quintanilla");
+
+        jLabel4.setText("Muyurina");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -42,19 +104,61 @@ public class SimulacionView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(269, 269, 269)
                 .addComponent(tituloLabel)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel1)
+                        .addGap(123, 123, 123)
+                        .addComponent(jLabel2)
+                        .addGap(91, 91, 91)
+                        .addComponent(jLabel3)
+                        .addGap(116, 116, 116)
+                        .addComponent(jLabel4)
+                        .addGap(0, 13, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(estacionImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(estacionImage2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(72, 72, 72)
+                        .addComponent(estacionImage3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(estacionImage4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(109, 109, 109))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(tituloLabel)
-                .addContainerGap(477, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(estacionImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(estacionImage2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(estacionImage3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(estacionImage4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addContainerGap(363, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private views.EstacionImage estacionImage1;
+    private views.EstacionImage estacionImage2;
+    private views.EstacionImage estacionImage3;
+    private views.EstacionImage estacionImage4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     public javax.swing.JLabel tituloLabel;
     // End of variables declaration//GEN-END:variables
 }
