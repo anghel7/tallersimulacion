@@ -27,4 +27,6 @@ public interface Router {
     public void enableMenubar(boolean isEnabled);
 
     public void showEditLineaView(ActionEvent evt, Linea linea);
+
+    public void showSimulacionView(ActionEvent evt, Linea linea);
 }

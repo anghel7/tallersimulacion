@@ -33,6 +33,7 @@ public class EditLineaView extends javax.swing.JPanel {
         paradaCreateFormView1 = new views.ParadaCreateFormView();
         paradaListView = new views.ParadaListView();
         editLineaFormView = new views.EditLineaFormView();
+        simularButton = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(850, 550));
         setRequestFocusEnabled(false);
@@ -40,14 +41,12 @@ public class EditLineaView extends javax.swing.JPanel {
         nameLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         nameLabel.setText("Nombre de la linea");
 
+        simularButton.setText("Iniciar simulación de la linea");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(311, 311, 311)
-                .addComponent(nameLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -59,18 +58,28 @@ public class EditLineaView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(paradaCreateFormView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(vagonCreateFormView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(vagonesListView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(simularButton)
+                        .addComponent(vagonesListView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(20, 20, 20))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(302, 302, 302)
+                .addComponent(nameLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(nameLabel)
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(vagonesListView, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editLineaFormView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(nameLabel)
+                        .addGap(37, 37, 37)
+                        .addComponent(editLineaFormView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(simularButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(vagonesListView, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -88,6 +97,7 @@ public class EditLineaView extends javax.swing.JPanel {
     public javax.swing.JLabel nameLabel;
     private views.ParadaCreateFormView paradaCreateFormView1;
     public views.ParadaListView paradaListView;
+    public javax.swing.JButton simularButton;
     private views.VagonCreateFormView vagonCreateFormView1;
     public views.VagonesListView vagonesListView;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.GroupLayout;
 import models.Linea;
@@ -16,7 +17,7 @@ import views.VagonItemView;
  *
  * @author skypper
  */
-public class EditLineaController {
+public class EditLineaController extends Controller {
 
     EditLineaView editLineaView;
     Linea linea;
@@ -25,7 +26,8 @@ public class EditLineaController {
     ParadaListViewController paradaListViewController;
     VagonesListController vagonesListController;
 
-    public EditLineaController(EditLineaView view, Linea linea) {
+    public EditLineaController(EditLineaView view, Router router, Linea linea) {
+        this.router = router;
         this.editLineaView = view;
         this.linea = linea;
         loadConf();
@@ -37,6 +39,13 @@ public class EditLineaController {
         paradaListViewController = new ParadaListViewController(editLineaView.paradaListView, linea.getParadas());
         vagonesListController = new VagonesListController(editLineaView.vagonesListView, linea.getVagones());
         //editLineaView.vagonesListView
+        editLineaView.simularButton.addActionListener((ActionEvent evt) -> {
+            showsimulacionView(evt);
+        });
+    }
+
+    private void showsimulacionView(ActionEvent evt) {
+        this.router.showSimulacionView(evt, linea);
     }
 
 }

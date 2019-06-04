@@ -18,6 +18,7 @@ import views.ListLineaView;
 import views.ListParadaView;
 import views.LoginView;
 import views.MainView;
+import views.SimulacionView;
 
 /**
  *
@@ -148,8 +149,15 @@ public class MainController implements Router {
     @Override
     public void showEditLineaView(ActionEvent evt, Linea linea) {
         EditLineaView editLineaView = new EditLineaView();
-        EditLineaController editLineaController = new EditLineaController(editLineaView, linea);
+        EditLineaController editLineaController = new EditLineaController(editLineaView, this, linea);
         loadView(editLineaView);
+    }
+
+    @Override
+    public void showSimulacionView(ActionEvent evt, Linea linea) {
+        SimulacionView simulacionView = new SimulacionView();
+        SimulacionController simulacionController = new SimulacionController(simulacionView, linea);
+        loadView(simulacionView);
     }
 
     /**
