@@ -31,7 +31,7 @@ public class EditLineaView extends javax.swing.JPanel {
         vagonCreateFormView1 = new views.VagonCreateFormView();
         vagonesListView1 = new views.VagonesListView();
         paradaCreateFormView1 = new views.ParadaCreateFormView();
-        paradaListView2 = new views.ParadaListView();
+        paradaListView = new views.ParadaListView();
         editLineaFormView = new views.EditLineaFormView();
 
         setPreferredSize(new java.awt.Dimension(850, 550));
@@ -53,7 +53,7 @@ public class EditLineaView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(paradaListView2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(paradaListView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(editLineaFormView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -77,7 +77,7 @@ public class EditLineaView extends javax.swing.JPanel {
                         .addComponent(vagonCreateFormView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(paradaCreateFormView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(paradaListView2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                    .addComponent(paradaListView, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -87,7 +87,7 @@ public class EditLineaView extends javax.swing.JPanel {
     public views.EditLineaFormView editLineaFormView;
     public javax.swing.JLabel nameLabel;
     private views.ParadaCreateFormView paradaCreateFormView1;
-    private views.ParadaListView paradaListView2;
+    public views.ParadaListView paradaListView;
     private views.VagonCreateFormView vagonCreateFormView1;
     private views.VagonesListView vagonesListView1;
     // End of variables declaration//GEN-END:variables

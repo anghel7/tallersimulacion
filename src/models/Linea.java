@@ -16,13 +16,15 @@ public class Linea {
     private String nombre;
     private String descripcion;
     private ArrayList<Vagon> vagones;
-    private int contador;
+    private ArrayList<Parada> paradas;
+    private int contadorVagones;
 
     public Linea(String nombre, String descripcion) {
         this.nombre = nombre;
-        contador = 0;
+        contadorVagones = 0;
         this.descripcion = descripcion;
         this.vagones = new ArrayList<>();
+        this.paradas = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -42,13 +44,21 @@ public class Linea {
     }
 
     public void addVagon(Vagon e) {
-        contador++;
-        e.setNumero(contador);
+        contadorVagones++;
+        e.setNumero(contadorVagones);
         vagones.add(e);
+    }
+
+    public void addParada(Parada e) {
+        paradas.add(e);
     }
 
     public ArrayList<Vagon> getVagones() {
         return vagones;
+    }
+
+    public ArrayList<Parada> getParadas() {
+        return paradas;
     }
 
 }
