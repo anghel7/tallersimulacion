@@ -50,6 +50,12 @@ public class ModelManager {
         lineaRoja.addVagon(new Vagon(100));
         lineaRoja.addVagon(new Vagon(100));
         lineaRoja.addVagon(new Vagon(100));
+        lineaRoja.addParada(new Parada("Obrajes","Chinata"));
+        lineaRoja.addParada(new Parada("Chinata","Sacaba"));
+        lineaRoja.addParada(new Parada("Sacaba", "Huayani"));
+        lineaRoja.addParada(new Parada("Huayani", "Quintanilla"));
+        lineaRoja.addParada(new Parada("Quintanilla", "Servicio de caminos"));
+        lineaRoja.addParada(new Parada("Servicio de caminos","MuyurinaaF"));
         tren.addLinea(lineaRoja);
         tren.addLinea(lineaAmarilla);
         tren.addLinea(lineaVerde);

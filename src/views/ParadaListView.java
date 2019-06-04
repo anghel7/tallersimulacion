@@ -76,8 +76,8 @@ public class ParadaListView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel containerPanel;
-    private javax.swing.JScrollPane containerScrollPane;
+    public javax.swing.JPanel containerPanel;
+    public javax.swing.JScrollPane containerScrollPane;
     private views.ParadaItemView paradaItemView1;
     private views.ParadaItemView paradaItemView2;
     private views.ParadaItemView paradaItemView3;
