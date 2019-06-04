@@ -28,14 +28,21 @@
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="editLineaFormView1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="paradaListView2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="editLineaFormView1" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="paradaCreateFormView1" min="-2" max="-2" attributes="0"/>
                   <Component id="vagonCreateFormView1" min="-2" max="-2" attributes="0"/>
                   <Component id="vagonesListView1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -45,13 +52,20 @@
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Component id="nameLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="editLineaFormView1" max="32767" attributes="0"/>
-                  <Component id="vagonesListView1" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="vagonesListView1" min="-2" pref="240" max="-2" attributes="0"/>
+                  <Component id="editLineaFormView1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="vagonCreateFormView1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="149" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="vagonCreateFormView1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="paradaCreateFormView1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="paradaListView2" pref="203" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,11 +82,15 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="views.EditLineaFormView" name="editLineaFormView1">
-    </Component>
     <Component class="views.VagonCreateFormView" name="vagonCreateFormView1">
     </Component>
     <Component class="views.VagonesListView" name="vagonesListView1">
+    </Component>
+    <Component class="views.ParadaCreateFormView" name="paradaCreateFormView1">
+    </Component>
+    <Component class="views.ParadaListView" name="paradaListView2">
+    </Component>
+    <Component class="views.EditLineaFormView" name="editLineaFormView1">
     </Component>
   </SubComponents>
 </Form>
