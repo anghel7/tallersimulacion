@@ -55,7 +55,7 @@ public class ModelManager {
         lineaRoja.addParada(new Parada("Sacaba", "Huayani"));
         lineaRoja.addParada(new Parada("Huayani", "Quintanilla"));
         lineaRoja.addParada(new Parada("Quintanilla", "Castillo"));
-        lineaRoja.addParada(new Parada("Castillo","MuyurinaF"));
+        lineaRoja.addParada(new Parada("Castillo","Muyurina"));
         tren.addLinea(lineaRoja);
         tren.addLinea(lineaAmarilla);
         tren.addLinea(lineaVerde);

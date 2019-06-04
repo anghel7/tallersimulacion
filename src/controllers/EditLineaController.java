@@ -17,24 +17,26 @@ import views.VagonItemView;
  * @author skypper
  */
 public class EditLineaController {
-    
+
     EditLineaView editLineaView;
     Linea linea;
     //Controller and view embeded
     EditLineaFormController editLineaFormController;
     ParadaListViewController paradaListViewController;
-    
+    VagonesListController vagonesListController;
+
     public EditLineaController(EditLineaView view, Linea linea) {
         this.editLineaView = view;
         this.linea = linea;
         loadConf();
     }
-    
-    public void loadConf() {        
+
+    public void loadConf() {
         editLineaView.nameLabel.setText(linea.getNombre());
         editLineaFormController = new EditLineaFormController(editLineaView.editLineaFormView, linea);
         paradaListViewController = new ParadaListViewController(editLineaView.paradaListView, linea.getParadas());
-        
+        vagonesListController = new VagonesListController(editLineaView.vagonesListView, linea.getVagones());
+        //editLineaView.vagonesListView
     }
-    
+
 }

@@ -28,17 +28,17 @@ public class VagonItemView extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        capacidadTextField = new javax.swing.JTextField();
 
         setBorder(javax.swing.BorderFactory.createTitledBorder("Vagon #"));
 
         jLabel1.setText("Cantidad Pasageros");
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("#");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        capacidadTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        capacidadTextField.setText("#");
+        capacidadTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                capacidadTextFieldActionPerformed(evt);
             }
         });
 
@@ -50,7 +50,7 @@ public class VagonItemView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(capacidadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
@@ -59,18 +59,18 @@ public class VagonItemView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(capacidadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void capacidadTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacidadTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_capacidadTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextField capacidadTextField;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
