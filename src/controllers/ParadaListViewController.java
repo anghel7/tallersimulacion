@@ -34,6 +34,7 @@ public class ParadaListViewController {
 
         for (Parada parada : paradas) {
             ParadaItemView paradaItemView = new ParadaItemView();
+            ParadaItemController paradaItemController = new ParadaItemController(paradaItemView, parada);
             components.add(paradaItemView);
         }
 
