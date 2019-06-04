@@ -20,6 +20,8 @@ public class EditLineaController {
 
     EditLineaView editLineaView;
     Linea linea;
+    //Controller and view embeded
+    EditLineaFormController editLineaFormController;
 
     public EditLineaController(EditLineaView view, Linea linea) {
         this.editLineaView = view;
@@ -28,7 +30,9 @@ public class EditLineaController {
     }
 
     public void loadConf() {
-        System.out.println("controllers.EditLineaController.loadConf()");
+        //editLineaView.EditLineaFormController
+        editLineaFormController = new EditLineaFormController(editLineaView.editLineaFormView, linea);
+
     }
 
 }

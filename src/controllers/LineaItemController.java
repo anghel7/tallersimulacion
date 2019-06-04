@@ -30,6 +30,7 @@ public class LineaItemController extends Controller {
         this.lineaItemView.descripcionTextArea.setText(linea.getDescripcion());
         this.lineaItemView.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(linea.getNombre())));
         lineaItemView.descripcionTextArea.setLineWrap(true);
+        lineaItemView.descripcionTextArea.setEnabled(false);
         lineaItemView.editarButton.addActionListener((ActionEvent evt) -> {
             editLinea(evt);
         });
