@@ -6,11 +6,10 @@
 package controllers;
 
 import java.awt.event.ActionEvent;
+import java.util.Timer;
+import java.util.TimerTask;
 import models.Linea;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
+import models.Provider;
 import org.jfree.data.category.DefaultCategoryDataset;
 import views.SimulacionView;
 
@@ -38,16 +37,23 @@ public class SimulacionController {
         graficoController = new GraficoController(simulacionView.graficoViewPanel);
     }
 
+    TimerTask timerTask = new TimerTask() {
+        public void run() {
+            // Aquí el código que queremos ejecutar. 
+            DefaultCategoryDataset data = providerLineaRoja.getData();
+            simulacionView.graficoViewPanel.removeAll();
+            graficoController.loadConf(data);
+            simulacionView.repaint();            
+        }
+    };
+
+    // Aquí se pone en marcha el timer cada segundo. 
+    Timer timer = new Timer();
+    Provider providerLineaRoja = new Provider("Linea Roja");
+
     private void startSimulation(ActionEvent evt) {
-        DefaultCategoryDataset data = new DefaultCategoryDataset();
-        data.addValue(2, "Linea Roja", "06:00");
-        data.addValue(2, "Linea Roja", "08:30");
-        data.addValue(3, "Linea Roja", "10:30");
-        data.addValue(4, "Linea Roja", "12:00");
-        data.addValue(5, "Linea Roja", "16:30");
-        data.addValue(6, "Linea Roja", "19:30");
-        data.addValue(6, "Linea Roja", "23:30");
-        //graficoController.loadConf(data);
-        
+        // Dentro de 0 milisegundos avísame cada 1000 milisegundos 
+        timer.scheduleAtFixedRate(timerTask, 0, 1000);
+
     }
 }
