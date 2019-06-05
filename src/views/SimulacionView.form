@@ -62,7 +62,7 @@
                       <EmptySpace min="-2" pref="268" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="panelG1" min="-2" pref="765" max="-2" attributes="0"/>
+                      <Component id="graficoViewPanel" min="-2" pref="765" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -89,7 +89,7 @@
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="panelG1" pref="383" max="32767" attributes="0"/>
+              <Component id="graficoViewPanel" pref="383" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -187,7 +187,10 @@
         <Property name="text" type="java.lang.String" value="Muyurina"/>
       </Properties>
     </Component>
-    <Component class="views.PanelG" name="panelG1">
+    <Component class="views.GraficoView" name="graficoViewPanel">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

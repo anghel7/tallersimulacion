@@ -38,7 +38,7 @@ public class SimulacionView extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        panelG1 = new views.PanelG();
+        graficoViewPanel = new views.GraficoView();
 
         setPreferredSize(new java.awt.Dimension(850, 550));
         setRequestFocusEnabled(false);
@@ -134,7 +134,7 @@ public class SimulacionView extends javax.swing.JPanel {
                         .addComponent(tituloLabel)
                         .addGap(268, 268, 268))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(panelG1, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(graficoViewPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(51, 51, 51))))
         );
         layout.setVerticalGroup(
@@ -155,7 +155,7 @@ public class SimulacionView extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelG1, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
+                .addComponent(graficoViewPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
                 .addGap(37, 37, 37))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -166,11 +166,11 @@ public class SimulacionView extends javax.swing.JPanel {
     private views.EstacionImage estacionImage2;
     private views.EstacionImage estacionImage3;
     private views.EstacionImage estacionImage4;
+    public views.GraficoView graficoViewPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private views.PanelG panelG1;
     public javax.swing.JLabel tituloLabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,56 +5,19 @@
  */
 package views;
 
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.category.DefaultCategoryDataset;
-
 /**
  *
  * @author skypper
  */
-public class PanelG extends javax.swing.JPanel {
+public class GraficoView extends javax.swing.JPanel {
 
     /**
      * Creates new form Login
      */
-    public PanelG() {
-        //initComponents();
-        initComponents2();
+    public GraficoView() {
+        initComponents();
     }
-
-    private void initComponents2() {
-        JFreeChart grafico;
-        DefaultCategoryDataset datos = new DefaultCategoryDataset();
-        datos.addValue(1, "Linea Roja", "06:00");
-        datos.addValue(2, "Linea Roja", "08:30");
-        datos.addValue(3, "Linea Roja", "10:30");
-        datos.addValue(4, "Linea Roja", "12:00");
-        datos.addValue(3, "Linea Roja", "16:30");
-        datos.addValue(5, "Linea Roja", "19:30");
-        datos.addValue(7, "Linea Roja", "23:30");
-        grafico = ChartFactory.createLineChart("Frecuencia de pasajeros",
-                "Horas", "Pasajeros", datos,
-                PlotOrientation.VERTICAL, true, true, false);
-        ChartPanel charPanel = new ChartPanel(grafico);
-
-        setPreferredSize(new java.awt.Dimension(850, 550));
-        setRequestFocusEnabled(false);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(charPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(charPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-    }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
