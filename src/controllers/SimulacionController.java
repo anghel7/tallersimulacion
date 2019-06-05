@@ -38,12 +38,12 @@ public class SimulacionController {
     }
 
     TimerTask timerTask = new TimerTask() {
-        public void run() {
-            // Aquí el código que queremos ejecutar. 
+        public void run() { 
             DefaultCategoryDataset data = providerLineaRoja.getData();
             simulacionView.graficoViewPanel.removeAll();
             graficoController.loadConf(data);
-            simulacionView.repaint();            
+            simulacionView.repaint();   
+            simulacionView.horaLabel.setText(providerLineaRoja.getLastData().getHora());
         }
     };
 
